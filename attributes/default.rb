@@ -9,6 +9,5 @@ override['razor']['images'] = {
 		'version' => '12.04'
 	}
 }
-override['razor']['app']['git_url']  = 'git://github.com/cloudware-cookbooks/ktc-razor.git'
 	
 

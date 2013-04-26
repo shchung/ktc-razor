@@ -31,9 +31,9 @@ razor_image "precise64" do
   version   "12.04"
 end
 
-#ktc_razor_tag "112jwhal333332345" do
-#        name            "121121qas3ee3t2stnaerme3"
-#        tag             "11tes3tt3ag333"
+#ktc_razor_tag "111j112jwhal333332345" do
+#        name            "111121121qas3ee3t2stnaerme3"
+#        tag             "11111tes3tt3ag333"
 #        tag_matcher      [{     "key"=> "memsize",
 #                                "compare"=>     "equal",
 #                                "value" =>      "1015mb",
@@ -46,4 +46,20 @@ end
 #                        }]
 #
 #        action  :add
+#end
+#ktc_razor_tag "1j12jwhal333332345" do
+#        name            "11121121qas3ee3t2stnaerme3"
+#        tag             "1111tes3tt3ag333"
+#        tag_matcher      [{     "key"=> "memsize",
+#                                "compare"=>     "equal",
+#                                "value" =>      "1015mb",
+#                                "invert" =>     "false"
+#                        },
+#                        {       "key"=>         "cpu",
+#                                "compare"       =>      "equal",
+#                                "value" =>      "15mb",
+#                                "invert"        =>      "false"
+#                        }]
+#
+#        action  :remove
 #end

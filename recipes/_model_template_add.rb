@@ -28,3 +28,27 @@ cookbook_file ::File.join(install_path + "/lib/project_razor/model/","ubuntu_pre
 	source "ubuntu_precise_ktc.rb"
 	mode "0644"
 end
+
+directory ::File.join(install_path + "/lib/project_razor/model/ubuntu/", "precise_ktc_ip") do
+	mode "0755"
+end
+
+%w[
+	precise_ktc_ip/boot_install.erb
+	precise_ktc_ip/boot_local.erb
+	precise_ktc_ip/kernel_args.erb
+	precise_ktc_ip/os_boot.erb
+	precise_ktc_ip/os_complete.erb
+	precise_ktc_ip/preseed.erb
+].each do |model_file|
+	cookbook_file ::File.join(install_path + "/lib/project_razor/model/ubuntu/",model_file) do
+		source model_file
+		mode "0644"
+	end
+end
+
+cookbook_file ::File.join(install_path + "/lib/project_razor/model/","ubuntu_precise_ktc_ip.rb") do
+	source "ubuntu_precise_ktc_ip.rb"
+	mode "0644"
+end
+

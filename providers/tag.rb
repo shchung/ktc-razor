@@ -56,10 +56,10 @@ def add_tag
    json_string = JSON.generate(json_hash) # Generate JSON String from Hash
    # POST with our JSON String supplied as the value for 'json_hash"
    res = Net::HTTP.post_form(@server_ip + "/razor/api/tag/", 'json_hash' => json_string)
-   response_hash = JSON.parse(res.body)
    unless res.class == Net::HTTPCreated # POST Response is HTTP Created (201) if successful
       raise "Error creating Tag Rule"
    end
+   response_hash = JSON.parse(res.body)
    tag_rule_uuid = response_hash["response"].first["@uuid"]
    new_resource.tag_matcher.each do |i|
    	json_hash = {"tag_rule_uuid" => tag_rule_uuid, # We supply the UUID from the Tag Rule above
@@ -70,10 +70,10 @@ def add_tag
    	             }
    	json_string = JSON.generate(json_hash)
    	res = Net::HTTP.post_form(@server_ip +"/razor/api/tag/#{tag_rule_uuid}/matcher", 'json_hash' => json_string)
-   	response_hash = JSON.parse(res.body)
    	unless res.class == Net::HTTPCreated
    	   raise "Error creating Matcher for Tag Rule #{tag_rule_uuid}"
    	end
+   	response_hash = JSON.parse(res.body)
   end
 end
 

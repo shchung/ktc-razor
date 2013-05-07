@@ -16,20 +16,30 @@ include_recipe 'razor::_app'
 include_recipe 'razor::_add_images'
 include_recipe 'ktc-razor::_add_tags'
 include_recipe 'ktc-razor::_model_template_add'
-
+include_recipe 'ktc-razor::_add_models'
 
 #include_recipe 'razor'
-
-razor_image "razor-mk" do
-  type      "mk"
-  url       "https://downloads.puppetlabs.com/razor/iso/prod/rz_mk_prod-image.0.12.0.iso"
-  action    :add
-end
-razor_image "precise64" do
-  type      "os"
-  url       "http://ftp.daum.net/ubuntu-releases/12.04/ubuntu-12.04.2-server-amd64.iso"
-  version   "12.04"
-end
+#Remain does thing for farther test 
+#ktc_razor_model "test01" do
+#   label	"label"
+#   template "ubuntu_precise"
+#   os_name  "prese64"
+#   metadata ({"hostname_prefix" 	=> "test1",
+#			 "domainname"		=> "testd1",
+#			 "root_password"	=> "test1_1234"}
+#		    )	
+#   action :remove
+#end
+#razor_image "razor-mk" do
+#  type      "mk"
+#  url       "https://downloads.puppetlabs.com/razor/iso/prod/rz_mk_prod-image.0.12.0.iso"
+#  action    :add
+#end
+#razor_image "precise64" do
+#  type      "os"
+#  url       "http://ftp.daum.net/ubuntu-releases/12.04/ubuntu-12.04.2-server-amd64.iso"
+#  version   "12.04"
+#end
 
 #ktc_razor_tag "111j112jwhal333332345" do
 #        name            "111121121qas3ee3t2stnaerme3"

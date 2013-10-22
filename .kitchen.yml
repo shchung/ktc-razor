@@ -19,5 +19,6 @@ platforms:
 suites:
 - name: default
   run_list:
+  - recipe[ktc-testing]
   - recipe[ktc-razor]
   attributes: 

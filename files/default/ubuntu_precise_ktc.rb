@@ -27,40 +27,40 @@ module ProjectRazor
         @osversion       = 'precise_ktc'
         @final_state     = :os_complete
         @req_metadata_hash = {
-            "@hostname_prefix" => {
-                :default     => "node",
-                :example     => "node",
-                :validation  => '^[a-zA-Z0-9][a-zA-Z0-9\-]*$',
-                :required    => true,
-                :description => "node hostname prefix (will append node number)"
-            },
-            "@hostname_postfix" => {
-                :default     => "-m",
-                :example     => "-vm -m",
-                :validation  => '^[a-zA-Z0-9][a-zA-Z0-9\-]*$',
-                :required    => true,
-                :description => "node hostname postfix (will append after node number)"
-            },
-            "@domainname"      => {
-                :default     => "localdomain",
-                :example     => "example.com",
-                :validation  => '^[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9](\.[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])*$',
-                :required    => true,
-                :description => "local domain name (will be used in /etc/hosts file)"
-            },
-            "@root_password"   => {
-                :default     => "test1234",
-                :example     => "P@ssword!",
-                :validation  => '^[\S]{8,}',
-                :required    => true,
-                :description => "root password (> 8 characters)"
-            },
-            "@root_disk"        => { :default     => "/dev/sda",
-                                            :example     => "/dev/sda",
-                                            :validation  => '^[\S]{8,}',
-                                            :required    => true,
-                                            :description => "Device to install ubuntu"
-	    }
+          "@hostname_prefix" => {
+            :default     => "node",
+            :example     => "node",
+            :validation  => '^[a-zA-Z0-9][a-zA-Z0-9\-]*$',
+            :required    => true,
+            :description => "node hostname prefix (will append node number)"
+          },
+          "@hostname_postfix" => {
+            :default     => "-m",
+            :example     => "-vm -m",
+            :validation  => '^[a-zA-Z0-9][a-zA-Z0-9\-]*$',
+            :required    => true,
+            :description => "node hostname postfix (will append after node number)"
+          },
+          "@domainname"      => {
+            :default     => "localdomain",
+            :example     => "example.com",
+            :validation  => '^[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9](\.[a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9])*$',
+            :required    => true,
+            :description => "local domain name (will be used in /etc/hosts file)"
+          },
+          "@root_password"   => {
+            :default     => "test1234",
+            :example     => "P@ssword!",
+            :validation  => '^[\S]{8,}',
+            :required    => true,
+            :description => "root password (> 8 characters)"
+          },
+          "@root_disk"        => { :default     => "/dev/sda",
+                                   :example     => "/dev/sda",
+                                   :validation  => '^[\S]{8,}',
+                                   :required    => true,
+                                   :description => "Device to install ubuntu"
+                                   }
         }
 
         from_hash(hash) unless hash == nil

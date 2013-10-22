@@ -7,7 +7,7 @@
 install_path = node['razor']['install_path']
 
 directory ::File.join(install_path + "/lib/project_razor/model/ubuntu/", "precise_ktc") do
-	mode "0755"
+  mode "0755"
 end
 
 %w[
@@ -18,19 +18,19 @@ end
 	precise_ktc/os_complete.erb
 	precise_ktc/preseed.erb
 ].each do |model_file|
-	cookbook_file ::File.join(install_path + "/lib/project_razor/model/ubuntu/",model_file) do
-		source model_file
-		mode "0644"
-	end
+  cookbook_file ::File.join(install_path + "/lib/project_razor/model/ubuntu/", model_file) do
+    source model_file
+    mode "0644"
+  end
 end
 
-cookbook_file ::File.join(install_path + "/lib/project_razor/model/","ubuntu_precise_ktc.rb") do
-	source "ubuntu_precise_ktc.rb"
-	mode "0644"
+cookbook_file ::File.join(install_path + "/lib/project_razor/model/", "ubuntu_precise_ktc.rb") do
+  source "ubuntu_precise_ktc.rb"
+  mode "0644"
 end
 
 directory ::File.join(install_path + "/lib/project_razor/model/ubuntu/", "precise_ktc_ip") do
-	mode "0755"
+  mode "0755"
 end
 
 %w[
@@ -41,14 +41,13 @@ end
 	precise_ktc_ip/os_complete.erb
 	precise_ktc_ip/preseed.erb
 ].each do |model_file|
-	cookbook_file ::File.join(install_path + "/lib/project_razor/model/ubuntu/",model_file) do
-		source model_file
-		mode "0644"
-	end
+  cookbook_file ::File.join(install_path + "/lib/project_razor/model/ubuntu/", model_file) do
+    source model_file
+    mode "0644"
+  end
 end
 
-cookbook_file ::File.join(install_path + "/lib/project_razor/model/","ubuntu_precise_ktc_ip.rb") do
-	source "ubuntu_precise_ktc_ip.rb"
-	mode "0644"
+cookbook_file ::File.join(install_path + "/lib/project_razor/model/", "ubuntu_precise_ktc_ip.rb") do
+  source "ubuntu_precise_ktc_ip.rb"
+  mode "0644"
 end
-

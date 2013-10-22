@@ -1,5 +1,6 @@
-maintainer       "YOUR_COMPANY_NAME"
-maintainer_email "YOUR_EMAIL"
+name             "ktc-razor"
+maintainer       "KT Cloudware"
+maintainer_email "spheromak@gmail.com"
 license          "All rights reserved"
 description      "razor cookbook wrapping"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))

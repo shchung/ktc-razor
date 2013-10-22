@@ -8,4 +8,6 @@ site :opscode
 
 metadata
 
-
+group :integration do
+  cookbook "ktc-testing"
+end

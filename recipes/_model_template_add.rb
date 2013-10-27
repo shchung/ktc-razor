@@ -93,7 +93,7 @@ end
   end
 end
 
-cookbook_file ::File.join(install_path + "/lib/project_razor/model/", "ubuntu_precise_lldp_mnode.rb") do
+cookbook_file::File.join(install_path+"/lib/project_razor/model/","ubuntu_precise_lldp_mnode.rb")do
   source "ubuntu_precise_lldp_mnode.rb"
   mode "0644"
 end

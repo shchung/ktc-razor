@@ -9,6 +9,7 @@
 
 # Bundler
 Gemfile.lock
+Berksfile.lock
 bin/*
 .bundle/*
 vendor/*

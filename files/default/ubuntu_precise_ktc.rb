@@ -37,7 +37,7 @@ module ProjectRazor
           "@hostname_postfix" => {
             :default     => "-m",
             :example     => "-vm -m",
-            :validation  => '^[a-zA-Z0-9][a-zA-Z0-9\-]*$',
+            :validation  => '^[a-zA-Z0-9\-][a-zA-Z0-9\-]*$',
             :required    => true,
             :description => "node hostname postfix (will append after node number)"
           },
